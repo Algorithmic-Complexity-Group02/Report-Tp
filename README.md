@@ -27,8 +27,8 @@
             <td>U202120911</td>
         </tr>
         <tr>
-            <td>Nombre</td>
-            <td>U</td>
+            <td>Galvan Cerron, George Aldo</td>
+            <td>U202116055</td>
         </tr>
         <tr>
             <td>Nombre</td>
