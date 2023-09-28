@@ -62,7 +62,7 @@ especializados, brindar una optimizacion y exactitud excelente en los catalogos.
 
 ## Descripción del problema
 
-<br><br>
+<br>Actualmente existen plataformas de stream que ofrecen a los usuarios un catalago de anime para su consumo. La pregunta mas recurrente de estas personas que consumen anime es de no saber que otra obra poder ver una vez terminada cierta serie. Lo normal es que la app le ofresca opciones, pero el problema radica en que no son precisas estas recomendaciones. <br>
 
 ## Descripción del conjunto de datos
 
