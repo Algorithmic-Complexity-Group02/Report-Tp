@@ -79,6 +79,9 @@ Este conjunto de datos se presta para diversas aplicaciones en inteligencia arti
 
 #### Primer Data Set: Anime List
 En el primer conjunto de datos se pueden observar 12 columnas, las cuales serán descritas a continuación:
+<div align=center>
+    <img src="https://media.discordapp.net/attachments/1151952856379822130/1156893538655686667/image.png?ex=6516a091&is=65154f11&hm=ea04ac00e0e0fa119a49939f783f16fbd98294cd80f1f70bd860f58486742e7c&=&width=1620&height=198" width="90%">
+</div>
 
 | Columna       | Descripción                                          |
 |---------------|------------------------------------------------------|
@@ -96,6 +99,10 @@ En el primer conjunto de datos se pueden observar 12 columnas, las cuales serán
 | Link          | URL del anime en MyAnimeList.                        |
 
 #### Segundo Data Set: Profile
+En el segundo conjunto de datos se pueden observar 5 columnas, las cuales serán descritas a continuación:
+<div align=center>
+    <img src="https://media.discordapp.net/attachments/1151952856379822130/1156894709122338897/image.png?ex=6516a1a8&is=65155028&hm=0bcc8960bd3631126051fae0e1e24f1a4ca3c8c10a84e0448cdcdeb77cefbf7b&=&width=1620&height=135" width="90%">
+</div>
 | Columna       | Descripción                                          |
 |---------------|------------------------------------------------------|
 | Profile       | El nombre de usuario del perfil.                     |
@@ -132,8 +139,12 @@ En este sentido, consideramos que tanto BFS como Kruskal son interesantes en est
 ## Bibliografía
 
 <br>
-Cervantes Silvente, H. (2019). La repercusión del anime en la sociedad: análisis sociológico. https://hdl.handle.net/11441/131682
 
-Shahzad, A. y Coenen, F. (2020). Efficient Distributed MST Based Clustering for Recommender Systems. 2020 International Conference on Data Mining Workshops. ICDMW. https://ieeexplore.ieee.org/document/9346360/citations?tabFilter=papers#citations
+- Cervantes Silvente, H. (2019). La repercusión del anime en la sociedad: análisis sociológico. https://hdl.handle.net/11441/131682
+
+- Shahzad, A. y Coenen, F. (2020). Efficient Distributed MST Based Clustering for Recommender Systems. 2020 International Conference on Data Mining Workshops. ICDMW. https://ieeexplore.ieee.org/document/9346360/citations?tabFilter=papers#citations
+
+- azathoth42. (2020, Octubre 31). MyAnimeList Dataset: Animes, Profiles, Reviews. Kaggle. https://www.kaggle.com/datasets/azathoth42/myanimelist 
+
 <br>
 
