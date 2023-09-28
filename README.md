@@ -70,14 +70,22 @@ especializados, brindar una optimizacion y exactitud excelente en los catalogos.
 
 ## Descripción del conjunto de datos
 
+Los datos que motivan nuestro análisis provienen de dos conjuntos de datos provenientes de My Anime List (MAL), una plataforma en línea dedicada a la catalogación y revisión de series de anime. Estos conjuntos de datos se han recopilado para explorar y comprender diversos aspectos relacionados con el mundo del anime y los usuarios de la plataforma.
 
-Los datos que hemos identificado en nuestro proyecto son los siguientes: un dataset con los nombres de las siguientes columnas: `uid`, `title`, `synopsis`, `genre`, `aired`, `episodes`, `members`, `popularity`, `ranked`, `score`, `img_url` y `link` teniendo un total de 19312 registros. De los cuales usaremos para el presente trabajo 2000 registros. El segundo data set con el que trabajaremos también es de My Anime List, solo que esta vez es un registro respecto al perfil del usuario con las siguientes columnas: `profile`, `gender`, `birthday`, `favorites_anime` y `link`, teniendo un total de 81729 filas de datos de las cuales usaremos 2000 datos como máximo y como mínimo 1500.
+Se ha identificado el dataset los nombres de las siguientes columnas: `uid`, `title`, `synopsis`, `genre`, `aired`, `episodes`, `members`, `popularity`, `ranked`, `score`, `img_url` y `link` teniendo un total de 19312 registros. De los cuales usaremos 2000 registros. El segundo data set con el que trabajaremos también es de My Anime List, solo que esta vez es un registro respecto al perfil del usuario con las siguientes columnas: `profile`, `gender`, `birthday`, `favorites_anime` y `link`, teniendo un total de 81729 filas de datos de las cuales usaremos 2000 datos como máximo y como mínimo 1500.
 
 Este conjunto de datos se presta para diversas aplicaciones en inteligencia artificial, como sistemas de recomendación y análisis de sentimientos, que se centran en comprender, generar o manipular el lenguaje humano. Al explorar las calificaciones, se abre la puerta a analizar las tendencias en el mundo del anime y cómo los géneros pueden desempeñar un papel destacado en estas tendencias. Este análisis podría revelar información valiosa sobre la popularidad de ciertos géneros, los factores que influyen en la percepción de calidad de un anime y cómo evolucionan las preferencias de los usuarios a lo largo del tiempo.
 
 ### Descripción
 
 #### Primer Data Set: Anime List
+
+- **Origen:** Los datos comprenden un conjunto de 19,312 registros relacionados con información detallada sobre animes, como su título, género, sinopsis, fecha de emisión, número de episodios, popularidad, puntuación y más. Este conjunto se utilizará en el proyecto, centrándose en 2,000 registros para el análisis.
+   - **Características Principales:**
+     - 12 columnas que incluyen `uid`, `title`, `synopsis`, `genre`, `aired`, `episodes`, `members`, `popularity`, `ranked`, `score`, `img_url`, y `link`.
+     - Datos relevantes para la creación de un interfaz amigable para el usuario en el frontend.
+   - **Motivo de Análisis:** Este conjunto de datos es valioso para aplicaciones de inteligencia artificial, como sistemas de recomendación y análisis de sentimientos, permitiendo explorar tendencias en el mundo del anime, la influencia de géneros y factores que afectan la percepción de calidad.
+
 En el primer conjunto de datos se pueden observar 12 columnas, las cuales serán descritas a continuación:
 <div align=center>
     <img src="https://media.discordapp.net/attachments/1151952856379822130/1156893538655686667/image.png?ex=6516a091&is=65154f11&hm=ea04ac00e0e0fa119a49939f783f16fbd98294cd80f1f70bd860f58486742e7c&=&width=1620&height=198" width="90%">
@@ -99,10 +107,17 @@ En el primer conjunto de datos se pueden observar 12 columnas, las cuales serán
 | Link          | URL del anime en MyAnimeList.                        |
 
 #### Segundo Data Set: Profile
+
+ - **Origen:** Este conjunto de datos consta de 81,729 registros relacionados con perfiles de usuarios en MAL, incluyendo información como el nombre de usuario, género, fecha de cumpleaños, animes favoritos y enlaces a los perfiles de usuario.
+   - **Características Principales:**
+     - 5 columnas que incluyen `profile`, `gender`, `birthday`, `favorites_anime`, y `link`.
+   - **Motivo de Análisis:** Estos datos proporcionan información sobre las preferencias y perfiles de los usuarios en la plataforma, lo que puede ser esencial para comprender las dinámicas de los usuarios y personalizar experiencias.
+
 En el segundo conjunto de datos se pueden observar 5 columnas, las cuales serán descritas a continuación:
 <div align=center>
     <img src="https://media.discordapp.net/attachments/1151952856379822130/1156894709122338897/image.png?ex=6516a1a8&is=65155028&hm=0bcc8960bd3631126051fae0e1e24f1a4ca3c8c10a84e0448cdcdeb77cefbf7b&=&width=1620&height=135" width="90%">
 </div>
+
 | Columna       | Descripción                                          |
 |---------------|------------------------------------------------------|
 | Profile       | El nombre de usuario del perfil.                     |
