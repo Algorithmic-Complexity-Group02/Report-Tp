@@ -62,7 +62,7 @@ especializados, brindar una optimizacion y exactitud excelente en los catalogos.
 
 ## Descripción del problema
 
-<br>Actualmente existen plataformas de stream que ofrecen a los usuarios un catalago de anime para su consumo. La pregunta mas recurrente de estas personas que consumen anime es de no saber que otra obra poder ver una vez terminada cierta serie. Lo normal es que la app le ofresca opciones, pero el problema radica en que no son precisas estas recomendaciones. <br>
+<br>Actualmente existen plataformas de stream que ofrecen a los usuarios un catalago de anime para su consumo. La pregunta mas recurrente de estas personas que consumen anime es de no saber que otra obra poder ver una vez terminada cierta serie. Lo normal es que la app le ofresca opciones, pero el problema radica en que no son precisas estas recomendaciones. Como usuario, uno siempre desea una experecia cada vez mejor con la irterfaz de las apps, por esa razon es que el no tener recomendaciones mas precisas, un menu de usuario acoplado a los gustos del cliente y no presentar una interaccion amigable por parte de la app, es perjudicial para ambas partes y requiere un desarrollo mas enfocado en resolverlo. <br>
 
 ## Descripción del conjunto de datos
 
