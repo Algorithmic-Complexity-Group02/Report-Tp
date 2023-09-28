@@ -38,7 +38,7 @@
 </div>
 <br>
 
-<br><br>
+<br>La idea de "Nombre del proyecto" nace de la problematica del tiempo perdido al elegir un anime, buscar el tipo de nuestro gusto y de encontrar a nuestro autor favorito. Actualmente es muy comun tener plataformas de Anime con una gran variedad en sus catalogos, pero es muy complicado que estas plataformas tengan un dedicado enfoque a los gustos de sus usuarios. Tambien, es sabido que a pesar de que sus bases de datos estan ya entrenadas con los perfiles de usuarios, no logran ofrecer recomendaciones o propuestas muy claras o interesantes para la persona. "Nombre del proyecto" tiene como enfoque, darle una mejor interfaz de recomendaciones y secciones de favoritos, tanto para usuarios nuevos como antiguos. A partir de una recopilación de database de varias categorias, tipos, autores, etc. de animes, para posteriormente con la aplicacion de algoritmos especializados, brindar una optimizacion y exactitud excelente en los catalogos. <br>
 # Índice
 
 - [COURSE PROJECT](#course-project)
