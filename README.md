@@ -46,6 +46,9 @@
   - [Introducción](#introducción)
   - [Descripción del problema](#descripción-del-problema)
   - [Descripción del conjunto de datos](#descripción-del-conjunto-de-datos)
+    - [Descripción](#descripción)
+      - [Primer Data Set: Anime List](#primer-data-set-anime-list)
+      - [Segundo Data Set: Profile](#segundo-data-set-profile)
   - [Propuesta](#propuesta)
     - [Técnica y Metodología](#técnica-y-metodología)
   - [Conclusiones](#conclusiones)
@@ -66,6 +69,43 @@ especializados, brindar una optimizacion y exactitud excelente en los catalogos.
 <br>Actualmente existen plataformas de stream que ofrecen a los usuarios un catalago de anime para su consumo. La pregunta mas recurrente de estas personas que consumen anime es de no saber que otra obra poder ver una vez terminada cierta serie. Lo normal es que la app le ofresca opciones, pero el problema radica en que no son precisas estas recomendaciones. Como usuario, uno siempre desea una experecia cada vez mejor con la irterfaz de las apps, por esa razon es que el no tener recomendaciones mas precisas, un menu de usuario acoplado a los gustos del cliente y no presentar una interaccion amigable por parte de la app, es perjudicial para ambas partes y requiere un desarrollo mas enfocado en resolverlo. <br>
 
 ## Descripción del conjunto de datos
+
+
+Los datos que hemos identificado en nuestro proyecto son los siguientes: un dataset con los nombres de las siguientes columnas: `uid`, `title`, `synopsis`, `genre`, `aired`, `episodes`, `members`, `popularity`, `ranked`, `score`, `img_url` y `link` teniendo un total de 19312 registros. De los cuales usaremos para el presente trabajo 2000 registros. El segundo data set con el que trabajaremos también es de My Anime List, solo que esta vez es un registro respecto al perfil del usuario con las siguientes columnas: `profile`, `gender`, `birthday`, `favorites_anime` y `link`, teniendo un total de 81729 filas de datos de las cuales usaremos 2000 datos como máximo y como mínimo 1500.
+
+Este conjunto de datos se presta para diversas aplicaciones en inteligencia artificial, como sistemas de recomendación y análisis de sentimientos, que se centran en comprender, generar o manipular el lenguaje humano. Al explorar las calificaciones, se abre la puerta a analizar las tendencias en el mundo del anime y cómo los géneros pueden desempeñar un papel destacado en estas tendencias. Este análisis podría revelar información valiosa sobre la popularidad de ciertos géneros, los factores que influyen en la percepción de calidad de un anime y cómo evolucionan las preferencias de los usuarios a lo largo del tiempo.
+
+### Descripción
+
+#### Primer Data Set: Anime List
+En el primer conjunto de datos se pueden observar 12 columnas, las cuales serán descritas a continuación:
+
+| Columna       | Descripción                                          |
+|---------------|------------------------------------------------------|
+| Uid           | Código de identificación del anime.                  |
+| Title         | Título del anime.                                    |
+| Genre         | Género o géneros del anime, separados por comas.     |
+| Synopsis      | Se presenta una sinopsis del anime, en inglés o en japonés.|
+| Aired         | Fecha de inicio de emisión y fecha final, en formato YYYY-MM-DD.|
+| Episodes      | Número de episodios del anime, o "Unknown" si no se conoce.|
+| Members       | Número de miembros del anime en MyAnimeList.         |
+| Popularity    | Popularidad del anime en MyAnimeList, basada en el número de miembros.|
+| Ranked        | Puesto que ocupa el anime en el ranking de MyAnimeList, basado en la puntuación media.|
+| Score         | Puntuación media del anime en MyAnimeList, de 0 a 10.|
+| Img_url       | URL de la imagen del póster del anime.               |
+| Link          | URL del anime en MyAnimeList.                        |
+
+#### Segundo Data Set: Profile
+| Columna       | Descripción                                          |
+|---------------|------------------------------------------------------|
+| Profile       | El nombre de usuario del perfil.                     |
+| Gender        | Género del usuario.                                  |
+| Birthday      | Fecha de cumpleaños del usuario.                     |
+| Favorites_anime| Lista de animes favoritos por código de anime.       |
+| Link          | Link del perfil de usuario en My Anime List.        |
+
+Cabe resaltar que tener una variedad de columnas que describen el anime es de gran utilidad porque deseamos tener una interfaz amigable para el usuario a través del front end.
+
 
 <br><br>
 
