@@ -78,4 +78,4 @@ especializados, brindar una optimizacion y exactitud excelente en los catalogos.
 
 ## Bibliografía
 
-<br><br>
+<br>Cervantes Silvente, H. (2019). La repercusión del anime en la sociedad: análisis sociológico. https://hdl.handle.net/11441/131682<br>
