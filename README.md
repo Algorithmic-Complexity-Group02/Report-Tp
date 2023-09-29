@@ -95,20 +95,20 @@ En el primer conjunto de datos se pueden observar 12 columnas, las cuales serán
     <img src="https://media.discordapp.net/attachments/1151952856379822130/1156893538655686667/image.png?ex=6516a091&is=65154f11&hm=ea04ac00e0e0fa119a49939f783f16fbd98294cd80f1f70bd860f58486742e7c&=&width=1620&height=198" width="90%">
 </div>
 
-| Columna       | Descripción                                          |
-|---------------|------------------------------------------------------|
-| Uid           | Código de identificación del anime.                  |
-| Title         | Título del anime.                                    |
-| Genre         | Género o géneros del anime, separados por comas.     |
-| Synopsis      | Se presenta una sinopsis del anime, en inglés o en japonés.|
-| Aired         | Fecha de inicio de emisión y fecha final, en formato YYYY-MM-DD.|
-| Episodes      | Número de episodios del anime, o "Unknown" si no se conoce.|
-| Members       | Número de miembros del anime en MyAnimeList.         |
-| Popularity    | Popularidad del anime en MyAnimeList, basada en el número de miembros.|
-| Ranked        | Puesto que ocupa el anime en el ranking de MyAnimeList, basado en la puntuación media.|
-| Score         | Puntuación media del anime en MyAnimeList, de 0 a 10.|
-| Img_url       | URL de la imagen del póster del anime.               |
-| Link          | URL del anime en MyAnimeList.                        |
+| Columna       | Descripción                                          | Tipo de Dato    |
+|---------------|------------------------------------------------------|-----------------|
+| Uid           | Código de identificación del anime.                  | int             |
+| Title         | Título del anime.                                    | string          |
+| Genre         | Género o géneros del anime, separados por comas.     | string          |
+| Synopsis      | Se presenta una sinopsis del anime, en inglés o en japonés. | string  |
+| Aired         | Fecha de inicio de emisión y fecha final, en formato YYYY-MM-DD. | string |
+| Episodes      | Número de episodios del anime, o "Unknown" si no se conoce. | int |
+| Members       | Número de miembros del anime en MyAnimeList.         | int             |
+| Popularity    | Popularidad del anime en MyAnimeList, basada en el número de miembros. | int |
+| Ranked        | Puesto que ocupa el anime en el ranking de MyAnimeList, basado en la puntuación media. | int |
+| Score         | Puntuación media del anime en MyAnimeList, de 0 a 10. | float           |
+| Img_url       | URL de la imagen del póster del anime.               | string          |
+| Link          | URL del anime en MyAnimeList.                        | string          |
 
 #### Segundo Data Set: Profile
 
@@ -122,14 +122,15 @@ En el segundo conjunto de datos se pueden observar 5 columnas, las cuales serán
     <img src="https://media.discordapp.net/attachments/1151952856379822130/1156894709122338897/image.png?ex=6516a1a8&is=65155028&hm=0bcc8960bd3631126051fae0e1e24f1a4ca3c8c10a84e0448cdcdeb77cefbf7b&=&width=1620&height=135" width="90%">
 </div>
 
-| Columna       | Descripción                                          |
-|---------------|------------------------------------------------------|
-| Profile       | El nombre de usuario del perfil.                     |
-| Gender        | Género del usuario.                                  |
-| Birthday      | Fecha de cumpleaños del usuario.                     |
-| Favorites_anime| Lista de animes favoritos por código de anime.       |
-| Link          | Link del perfil de usuario en My Anime List.        |
+| Columna         | Descripción                                          | Tipo de Dato    |
+|-----------------|------------------------------------------------------|-----------------|
+| Profile         | El nombre de usuario del perfil.                     | string          |
+| Gender          | Género del usuario.                                  | string          |
+| Birthday        | Fecha de cumpleaños del usuario.                     | string          |
+| Favorites_anime | Lista de animes favoritos por código de anime.       | List
+| Link            | Link del perfil de usuario en My Anime List.         | string          |
 
+La elección del tipo de dato para `Birthday` puede depender de cómo planeas utilizar la información. Puede manejarse como una cadena si solo necesitas mostrar la fecha, o puedes usar un tipo de dato `datetime` si planeas realizar operaciones relacionadas con fechas. La elección de `Favorites_anime` depende de cómo se almacenan los códigos de anime en tu contexto: si son enteros, puedes usar una lista de enteros; si son cadenas, una lista de cadenas.
 Cabe resaltar que tener una variedad de columnas que describen el anime es de gran utilidad porque deseamos tener una interfaz amigable para el usuario a través del front end.
 
 
