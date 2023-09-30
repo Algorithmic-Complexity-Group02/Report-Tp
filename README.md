@@ -49,6 +49,7 @@
     - [Descripción](#descripción)
       - [Primer Data Set: Anime List](#primer-data-set-anime-list)
       - [Segundo Data Set: Profile](#segundo-data-set-profile)
+      - [Reprentación de los nodos](#reprentación-de-los-nodos)
   - [Propuesta](#propuesta)
     - [Técnica y Metodología](#técnica-y-metodología)
   - [Conclusiones](#conclusiones)
@@ -132,6 +133,80 @@ En el segundo conjunto de datos se pueden observar 5 columnas, las cuales serán
 | Link            | Link del perfil de usuario en My Anime List.         | string          |
 
 Cabe resaltar que tener una variedad de columnas que describen el anime es de gran utilidad porque deseamos tener una interfaz amigable para el usuario a través del front end. Por otro lado, el segundo conjunto de datos nos permite conocer los gustos de los usuarios y así poder recomendarles animes que se ajusten a sus preferencias.
+
+#### Reprentación de los nodos
+Para la representación de los nodos se ha utilizado el siguiente codigo en Python y se ha ejecutado en Google Collab
+
+~~~Python
+import pandas as pd
+import matplotlib.pyplot as plt
+import networkx as nx
+
+urlProfileTest = "https://raw.githubusercontent.com/Algorithmic-Complexity-Group05/Report-Tp/feature/proposal/datasets/profiles.csv"
+urlAnimeTest = "https://raw.githubusercontent.com/Algorithmic-Complexity-Group05/Report-Tp/feature/proposal/datasets/animes.csv"
+
+df_animes = pd.read_csv(urlAnimeTest, nrows=3000)
+df_usuarios = pd.read_csv(urlProfileTest, nrows=1500)
+
+nodos = {}
+bordes = []
+
+for _, row in df_animes.iterrows():
+    anime_uid = row["uid"]
+    nodos[anime_uid] = {"tipo": "anime", "data": row, "title": row["title"]}
+
+for _, row in df_usuarios.iterrows():
+    user_profile = row["profile"]
+    nodos[user_profile] = {"tipo": "usuario", "data": row, "nombre_perfil": user_profile}
+
+for _, row in df_usuarios.iterrows():
+    user_profile = row["profile"]
+    
+    favorite_animes_str = row["favorites_anime"]
+    favorite_animes = [anime_id.strip(" '[]") for anime_id in favorite_animes_str.split(',')]
+
+    for anime_uid in favorite_animes:
+        if anime_uid:
+            try:
+                anime_uid = int(anime_uid)
+                bordes.append((user_profile, anime_uid, {"tipo_interaccion": "favorito"}))
+            except ValueError as e:
+                print(f"Error al convertir a entero el valor '{anime_uid}' para el usuario {user_profile}: {e}")
+
+G = {"nodos": nodos, "bordes": bordes}
+
+G_nx = nx.DiGraph()
+G_nx.add_nodes_from(G["nodos"].items())
+G_nx.add_edges_from(G["bordes"])
+
+pos = nx.spring_layout(G_nx)
+labels_anime = nx.get_node_attributes(G_nx, 'title')
+labels_usuario = nx.get_node_attributes(G_nx, 'nombre_perfil')
+
+colores_nodos = ['skyblue' if data.get('tipo', 'Desconocido') == 'anime' else 'orange' for node, data in G_nx.nodes(data=True)]
+
+G = nx.Graph(G_nx)
+
+pos = nx.spring_layout(G, k=0.5, iterations=1000)
+_, ax = plt.subplots(figsize=(20, 20))
+
+nx.draw_networkx(G, pos, with_labels=False, node_size=10, ax=ax, node_color=colores_nodos)
+ax.axis('off')
+
+plt.show()
+~~~
+
+Para la representación de todos los grafos se han tomando en cuenta los primeras 3000 lineas del dataset de anime y las 1500 del dataset de Usuarios. Como podemos observar, en las partes laterales, no todos los nodos estan conectados, tendremos que tener en cuenta esto al momento de la realización del proyecto 
+
+<div align=center>
+    <img src="https://cdn.discordapp.com/attachments/1040019098689613875/1157714275058585650/image.png?ex=65199cf0&is=65184b70&hm=6ad7fa95313d913fbb3504b108c458553c6411b95706d978d329e3188e459b1c&" alt="Project Report"  width="70%"/>
+</div>
+
+Asimismo, podemos ver una representación a mas corta escala de la conexión entre los nodos
+
+<div align=center>
+    <img src="https://media.discordapp.net/attachments/1157361311060066345/1157705079252586496/image.png?ex=65199460&is=651842e0&hm=77d1382725487bc5de890f7321e0af26b6d66ace4ee264e84e80d6305493fb32&=&width=1377&height=814" alt="Project Report"  width="70%"/>
+</div>
 
 <br><br>
 
