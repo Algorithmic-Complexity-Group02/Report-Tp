@@ -58,15 +58,19 @@
 
 ## Introducción
 
-<br>"La evolución del anime en el panorama español ha constituido un tema interesante, ya que supuso el auge de la cultura otaku" Cervantes Helena (2019). La idea de AnimePlus nace de la problematica del tiempo perdido al elegir un anime, buscar el tipo de nuestro gusto y de encontrar a nuestro autor favorito. Actualmente es muy comun tener plataformas de
-Anime con una gran variedad en sus catalogos, pero es muy complicado que estas plataformas tengan un dedicado enfoque a los gustos de sus usuarios. Tambien, es sabido que a pesar de que sus bases de datos estan ya
-entrenadas con los perfiles de usuarios, no logran ofrecer recomendaciones o propuestas muy claras o interesantes para la persona. AnimePlus tiene como enfoque, darle una mejor interfaz de recomendaciones y
-secciones de favoritos, tanto para usuarios nuevos como antiguos. A partir de una recopilación de database de varias categorias, tipos, autores, etc. de animes, para posteriormente con la aplicacion de algoritmos
-especializados, brindar una optimizacion y exactitud excelente en los catalogos. <br>
+"La evolución del anime en el panorama español ha sido un tema fascinante, marcando el auge de la cultura otaku" (Cervantes Helena, 2019). En este contexto, surge la idea de AnimePlus como respuesta a la problemática del tiempo perdido al seleccionar un anime, buscar el tipo que nos gusta y encontrar a nuestro autor favorito. Aunque existen numerosas plataformas de anime con extensos catálogos, es común que estas carezcan de un enfoque dedicado a los gustos individuales de los usuarios.
+
+Una limitación notable de las plataformas existentes es que muestran contenido similar basado en su catálogo, pero no necesariamente abarcan todos los animes que existen y que podrían ajustarse a los gustos particulares de un usuario. AnimePlus aborda esta brecha al recopilar bases de datos de diversas categorías, tipos, autores, etc., de animes, garantizando así una representación más completa de la diversidad del anime.
+
+Para lograr esto, AnimePlus emplea algoritmos avanzados como el algoritmo de Kruskal y el algoritmo BFS (Breadth-First Search). Estos algoritmos no solo consideran las preferencias generales, sino que también analizan de manera detallada los gustos específicos de cada usuario. La aplicación de estos algoritmos especializados permite una exploración exhaustiva del vasto universo del anime, asegurando recomendaciones personalizadas y precisas. La meta es crear una experiencia única para cada amante del anime al descubrir nuevas obras que se adapten a sus preferencias de manera más amplia y precisa.
+
+</br>
 
 ## Descripción del problema
 
-<br>Actualmente existen plataformas de stream que ofrecen a los usuarios un catalago de anime para su consumo. La pregunta mas recurrente de estas personas que consumen anime es de no saber que otra obra poder ver una vez terminada cierta serie. Lo normal es que la app le ofresca opciones, pero el problema radica en que no son precisas estas recomendaciones. Como usuario, uno siempre desea una experecia cada vez mejor con la irterfaz de las apps, por esa razon es que el no tener recomendaciones mas precisas, un menu de usuario acoplado a los gustos del cliente y no presentar una interaccion amigable por parte de la app, es perjudicial para ambas partes y requiere un desarrollo mas enfocado en resolverlo. <br>
+<br>En la actualidad, diversas plataformas de streaming ofrecen a los usuarios un extenso catálogo de anime para su disfrute. Sin embargo, surge una inquietud recurrente entre los consumidores de anime: la incertidumbre sobre qué obra ver después de terminar una serie en particular. Aunque las aplicaciones suelen proporcionar opciones de recomendación, el problema radica en la falta de precisión de estas sugerencias, ya que generalmente se limitan a recomendar dentro de su propio catálogo, sin abarcar la totalidad de opciones disponibles.
+
+Como usuario, la búsqueda de una experiencia mejorada en la interfaz de las aplicaciones es constante. La ausencia de recomendaciones precisas, la falta de un menú personalizado acorde a los gustos individuales y la carencia de una interacción amigable por parte de la aplicación se convierten en obstáculos que afectan tanto a los usuarios como a las propias plataformas. Abordar esta problemática requiere un enfoque de desarrollo más centrado en solucionar estas cuestiones, mejorando así la experiencia global para ambas partes.<br>
 
 ## Descripción del conjunto de datos
 
@@ -91,20 +95,20 @@ En el primer conjunto de datos se pueden observar 12 columnas, las cuales serán
     <img src="https://media.discordapp.net/attachments/1151952856379822130/1156893538655686667/image.png?ex=6516a091&is=65154f11&hm=ea04ac00e0e0fa119a49939f783f16fbd98294cd80f1f70bd860f58486742e7c&=&width=1620&height=198" width="90%">
 </div>
 
-| Columna       | Descripción                                          |
-|---------------|------------------------------------------------------|
-| Uid           | Código de identificación del anime.                  |
-| Title         | Título del anime.                                    |
-| Genre         | Género o géneros del anime, separados por comas.     |
-| Synopsis      | Se presenta una sinopsis del anime, en inglés o en japonés.|
-| Aired         | Fecha de inicio de emisión y fecha final, en formato YYYY-MM-DD.|
-| Episodes      | Número de episodios del anime, o "Unknown" si no se conoce.|
-| Members       | Número de miembros del anime en MyAnimeList.         |
-| Popularity    | Popularidad del anime en MyAnimeList, basada en el número de miembros.|
-| Ranked        | Puesto que ocupa el anime en el ranking de MyAnimeList, basado en la puntuación media.|
-| Score         | Puntuación media del anime en MyAnimeList, de 0 a 10.|
-| Img_url       | URL de la imagen del póster del anime.               |
-| Link          | URL del anime en MyAnimeList.                        |
+| Columna       | Descripción                                          | Tipo de Dato    |
+|---------------|------------------------------------------------------|-----------------|
+| Uid           | Código de identificación del anime.                  | int             |
+| Title         | Título del anime.                                    | string          |
+| Genre         | Género o géneros del anime, separados por comas.     | string          |
+| Synopsis      | Se presenta una sinopsis del anime, en inglés o en japonés. | string  |
+| Aired         | Fecha de inicio de emisión y fecha final, en formato YYYY-MM-DD. | string |
+| Episodes      | Número de episodios del anime, o "Unknown" si no se conoce. | int |
+| Members       | Número de miembros del anime en MyAnimeList.         | int             |
+| Popularity    | Popularidad del anime en MyAnimeList, basada en el número de miembros. | int |
+| Ranked        | Puesto que ocupa el anime en el ranking de MyAnimeList, basado en la puntuación media. | int |
+| Score         | Puntuación media del anime en MyAnimeList, de 0 a 10. | float           |
+| Img_url       | URL de la imagen del póster del anime.               | string          |
+| Link          | URL del anime en MyAnimeList.                        | string          |
 
 #### Segundo Data Set: Profile
 
@@ -118,14 +122,15 @@ En el segundo conjunto de datos se pueden observar 5 columnas, las cuales serán
     <img src="https://media.discordapp.net/attachments/1151952856379822130/1156894709122338897/image.png?ex=6516a1a8&is=65155028&hm=0bcc8960bd3631126051fae0e1e24f1a4ca3c8c10a84e0448cdcdeb77cefbf7b&=&width=1620&height=135" width="90%">
 </div>
 
-| Columna       | Descripción                                          |
-|---------------|------------------------------------------------------|
-| Profile       | El nombre de usuario del perfil.                     |
-| Gender        | Género del usuario.                                  |
-| Birthday      | Fecha de cumpleaños del usuario.                     |
-| Favorites_anime| Lista de animes favoritos por código de anime.       |
-| Link          | Link del perfil de usuario en My Anime List.        |
+| Columna         | Descripción                                          | Tipo de Dato    |
+|-----------------|------------------------------------------------------|-----------------|
+| Profile         | El nombre de usuario del perfil.                     | string          |
+| Gender          | Género del usuario.                                  | string          |
+| Birthday        | Fecha de cumpleaños del usuario.                     | string          |
+| Favorites_anime | Lista de animes favoritos por código de anime.       | List
+| Link            | Link del perfil de usuario en My Anime List.         | string          |
 
+La elección del tipo de dato para `Birthday` puede depender de cómo planeas utilizar la información. Puede manejarse como una cadena si solo necesitas mostrar la fecha, o puedes usar un tipo de dato `datetime` si planeas realizar operaciones relacionadas con fechas. La elección de `Favorites_anime` depende de cómo se almacenan los códigos de anime en tu contexto: si son enteros, puedes usar una lista de enteros; si son cadenas, una lista de cadenas.
 Cabe resaltar que tener una variedad de columnas que describen el anime es de gran utilidad porque deseamos tener una interfaz amigable para el usuario a través del front end.
 
 
