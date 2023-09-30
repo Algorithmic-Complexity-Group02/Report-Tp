@@ -151,7 +151,10 @@ En este sentido, consideramos que tanto BFS como Kruskal son interesantes en est
 <br>
 
 ## Conclusiones
-
+- En el presente trabajo abordamos la necesidad de personalización en las recomendaciones de anime, permitiendo a los usuarios explorar contenidos de acuerdo con sus gustos específicos.
+- Nuestra idea llamada OtaCopilot utiliza algoritmos avanzados como BFS y Kruskal para proporcionar recomendaciones precisas y personalizadas.
+- Buscamos permitir a los usuarios explorar el vasto universo del anime, descubriendo nuevas obras que se ajusten a sus preferencias de manera más amplia y precisa.
+- Se Busca proporcionar una interfaz amigable para el usuario, con una experiencia única para cada amante del anime.
 <br><br>
 
 ## Bibliografía
@@ -173,9 +176,10 @@ En este sentido, consideramos que tanto BFS como Kruskal son interesantes en est
 - Link del repositorio del dataset: https://github.com/Algorithmic-Complexity-Group05/dataset
 - Link del Project: https://github.com/orgs/Algorithmic-Complexity-Group05/projects/1/views/1
 <div align=center>
-    <img src="https://media.discordapp.net/attachments/1157361311060066345/1157705807098560562/image.png?ex=6519950d&is=6518438d&hm=f136d1592a6110a9f211d5497f4bf17ba1818831c4e7053c802458b69ceba1f1&=&width=1491&height=814" alt="Project Report"  width="70%"/>
+    <img src="https://media.discordapp.net/attachments/1157361311060066345/1157705807098560562/image.png?ex=6519950d&is=6518438d&hm=f136d1592a6110a9f211d5497f4bf17ba1818831c4e7053c802458b69ceba1f1&=&width=1491&height=814" alt="Project Report"  width="80%"/>
 </div>
 - Evidencia Milestone 1:
   <div align=center>
-    <img src="https://media.discordapp.net/attachments/1157361311060066345/1157709518042583090/image.png?ex=65199882&is=65184702&hm=0037065e9ad107c32161fbb13a89670d5a1fa2b7936d9ce004648062373dfe97&=&width=1620&height=304" alt="Project Report"  width="70%"/>
+    <img src="https://media.discordapp.net/attachments/1157361311060066345/1157709518042583090/image.png?ex=65199882&is=65184702&hm=0037065e9ad107c32161fbb13a89670d5a1fa2b7936d9ce004648062373dfe97&=&width=1620&height=304" alt="Project Report"  width="80%"/>
 </div>
+
