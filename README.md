@@ -45,11 +45,14 @@
 - [Índice](#índice)
   - [Introducción](#introducción)
   - [Descripción del problema](#descripción-del-problema)
+    - [Objetivo](#objetivo)
   - [Descripción del conjunto de datos](#descripción-del-conjunto-de-datos)
     - [Descripción](#descripción)
       - [Primer Data Set: Anime List](#primer-data-set-anime-list)
       - [Segundo Data Set: Profile](#segundo-data-set-profile)
       - [Reprentación de los nodos](#reprentación-de-los-nodos)
+      - [Grafo Completo](#grafo-completo)
+      - [Subgrafos](#subgrafos)
   - [Propuesta](#propuesta)
     - [Técnica y Metodología](#técnica-y-metodología)
   - [Conclusiones](#conclusiones)
@@ -73,6 +76,11 @@ Para lograr esto, Otacopilot emplea algoritmos avanzados como el algoritmo de Kr
 <br>En la actualidad, diversas plataformas de streaming ofrecen a los usuarios un extenso catálogo de anime para su disfrute. Sin embargo, existe una recurrente inquietud entre los consumidores de anime: la incertidumbre sobre qué obra ver después de terminar una serie en particular. Aunque las aplicaciones suelen proporcionar opciones de recomendación, el problema radica en la falta de precisión de estas sugerencias, ya que generalmente se limitan a recomendar dentro de su propio catálogo, sin abarcar la totalidad de opciones disponibles.
 
 Como usuario, la búsqueda de una experiencia mejorada en la interfaz de las aplicaciones es constante. La ausencia de recomendaciones precisas, la falta de un menú personalizado acorde a los gustos individuales y la carencia de una interacción amigable por parte de la aplicación se convierten en obstáculos que afectan tanto a los usuarios como a las propias plataformas. Abordar esta problemática requiere un enfoque de desarrollo más centrado en solucionar estas cuestiones, mejorando así la experiencia global para ambas partes.<br>
+
+### Objetivo
+
+En ese sentido, el objetivo del proyecto es el de desarrollar un sistema de recomendación de anime que supere las limitaciones de las plataformas actuales, proporcionando a los usuarios recomendaciones precisas y personalizadas, además de una experiencia interactiva y amigable. Para lograr esto, se utilizarán diferentes algoritmos de búsqueda y recorrido de grafos para crear un sistema efectivo que mejore significativamente la experiencia de los usuarios al explorar y disfrutar del anime.
+
 
 ## Descripción del conjunto de datos
 
@@ -195,19 +203,26 @@ ax.axis('off')
 
 plt.show()
 ~~~
+#### Grafo Completo
 
-Para la representación de todos los grafos se han tomando en cuenta los primeras 3000 lineas del dataset de anime y las 1500 del dataset de Usuarios. Como podemos observar, en las partes laterales, no todos los nodos estan conectados, tendremos que tener en cuenta esto al momento de la realización del proyecto 
+Para la representación de todos los grafos se han tomando en cuenta una parte del dataset asi como diferentes librerías de Python. Como podemos observar, en las partes laterales, no todos los nodos estan conectados, tendremos que tener en cuenta esto al momento de la realización del proyecto.
 
 <div align=center>
     <img src="https://cdn.discordapp.com/attachments/1040019098689613875/1157714275058585650/image.png?ex=65199cf0&is=65184b70&hm=6ad7fa95313d913fbb3504b108c458553c6411b95706d978d329e3188e459b1c&" alt="Project Report"  width="70%"/>
 </div>
 
-Asimismo, podemos ver una representación a mas corta escala de la conexión entre los nodos
+#### Subgrafos
+Asimismo, podemos ver una representación a corta escala de la conexión entre los nodos. Los nodos estarían relacionados de acuerdo a si un usuario a añadido alguna serie de anime a su lista de favoritos. 
 
 <div align=center>
     <img src="https://media.discordapp.net/attachments/1157361311060066345/1157705079252586496/image.png?ex=65199460&is=651842e0&hm=77d1382725487bc5de890f7321e0af26b6d66ace4ee264e84e80d6305493fb32&=&width=1377&height=814" alt="Project Report"  width="70%"/>
 </div>
+<br>
+De igual forma, podemos ver otra representación a pequeña escala de 200 nodos en total
 
+<div align=center>
+    <img src="https://media.discordapp.net/attachments/1157361311060066345/1157719105269411851/d443498a-5a45-43cd-b421-7695ff05a4db.png?ex=6519a170&is=65184ff0&hm=81e06048ac63eedb7b83cd6a3afdeadc4ea55667df76bd705e7224926d4a7e76&=&width=1218&height=814" alt="Project Report"  width="70%"/>
+</div>
 <br><br>
 
 ## Propuesta
@@ -229,7 +244,7 @@ En este sentido, consideramos que tanto BFS como Kruskal son interesantes en est
 - En el presente trabajo abordamos la necesidad de personalización en las recomendaciones de anime, permitiendo a los usuarios explorar contenidos de acuerdo con sus gustos específicos.
 - Nuestra idea llamada OtaCopilot utiliza algoritmos avanzados como BFS y Kruskal para proporcionar recomendaciones precisas y personalizadas.
 - Buscamos permitir a los usuarios explorar el vasto universo del anime, descubriendo nuevas obras que se ajusten a sus preferencias de manera más amplia y precisa.
-- Se Busca proporcionar una interfaz amigable para el usuario, con una experiencia única para cada amante del anime.
+- Se busca proporcionar una interfaz amigable para el usuario, con una experiencia única para cada amante del anime.
 <br><br>
 
 ## Bibliografía
