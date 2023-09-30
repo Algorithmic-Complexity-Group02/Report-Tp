@@ -12,7 +12,7 @@
 </p>
 
 <p align="center">
-    <strong>Grupo 05</strong><br>
+    <strong>Grupo 02</strong><br>
 </p>
 
 <div style="text-align:center;">
