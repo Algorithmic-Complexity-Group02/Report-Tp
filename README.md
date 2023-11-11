@@ -55,6 +55,10 @@
       - [Subgrafos](#subgrafos)
   - [Propuesta](#propuesta)
     - [Técnica y Metodología](#técnica-y-metodología)
+  - [Diseño del Aplicativo](#diseño-del-aplicativo) 
+    - [Diseño del Front](#diseño-del-front)
+    - [Algoritmo UDFS](#algoritmo-udfs)
+    - [Algoritmo BFS](#algoritmo-bfs)
   - [Conclusiones](#conclusiones)
   - [Bibliografía](#bibliografía)
   - [Anexos](#anexos)
@@ -243,6 +247,81 @@ Para lograr este objetivo, proponemos utilizar una combinación de técnicas y a
   
 <br>
 
+## Diseño del Aplicativo
+Nuestra app web cuenta con dos capas, estas son el "back-end" y en el "front-end", ambas trabajan en armonia para poder ejecutarse OtaCopilot, nuestro sitio web para buscar y recomendar gran variedad de Animes.
+#### Diseño del Front
+La primera imagen cumple con la funcion de explicar sobre la app web, nos brinda una introducción a nuestra biblioteca virtual de Anime. Para la implementación de este apartado fue necesario el uso de Html, trabajado en el entorno de Angular.
+<div align=center>
+    <img src="https://media.discordapp.net/attachments/1171304594312265767/1172827989172563978/image.png?ex=6561bc2e&is=654f472e&hm=ee63cdb2af4148335667c40032d25d2208772fc11ad39c7dfa0cf459a6f918c3&=&width=1306&height=614" alt="Project Report"  width="70%"/>
+</div>
+La segunda imagen nos muestra una barra de busqueda en la cual el usuario puede escribir el nombre del Anime deseado y en base a esta información, el software nos brindara recomendaciones a parte del Anime solicitado. Para su implementación fue necesario el adaptamiento de nuestros algoritmos de busqueda, en caso se indroduzca el nombre de algun Anime, se llamaria a un 'endpoint' que vendria a ser el back-end y este ejecutaria el algoritmo, entonces siguiendo el proceso del algoritmo nos retornaria el Anime y sus respectivas recomendaciones.
+<div align=center>
+    <img src="https://media.discordapp.net/attachments/1171304594312265767/1172828046017970247/image.png?ex=6561bc3c&is=654f473c&hm=2274f076434b07b4377b3ef61aa12268fc4cb7da485566cbeec91cd009c5665a&=&width=1375&height=614" alt="Project Report"  width="70%"/>
+</div>
+La tercera imagen es un complemento del resto de la interfaz de usuario que nos da los Anime-Card iniciales y en consecuencia de buscar un anime, tambien se aprovechara este espacio en mostrarnos las recomendaciones. 
+<div align=center>
+    <img src="https://media.discordapp.net/attachments/1171304594312265767/1172828139060211753/image.png?ex=6561bc52&is=654f4752&hm=ba4541215a071419fcc7cd6501a6b25dd34025dee931978b280dda5d8c752eae&=&width=1377&height=614" alt="Project Report"  width="70%"/>
+</div>
+
+#### Algoritmo UDFS
+La aplicación del algoritmo UFDS para gestionar relaciones entre animes se revela como una estrategia eficaz. Este algoritmo facilita la identificación y conexión de animes relacionados, permitiendo una representación eficiente de las asociaciones dentro de la base de datos.
+<div align=center>
+    <img src="https://media.discordapp.net/attachments/1171304594312265767/1172828439888269312/image.png?ex=6561bc9a&is=654f479a&hm=4cc12db1bc02bd7dd5ab2aafc2491ffffebc090c7b5e7e86d95a18500c98919e&=&width=668&height=614" alt="Project Report"  width="70%"/>
+</div>
+
+#### Algoritmo BFS
+
+La implementación de BFS como parte del conjunto de técnicas de búsqueda y recomendación en la aplicación de búsqueda de animes contribuye significativamente a ofrecer recomendaciones personalizadas y relevantes para los usuarios, mejorando así la experiencia global del usuario.
+
+~~~
+def recommend_animes_bfs(graph, source_anime_title, node_id_mapping):
+    source_anime_uid = get_anime_uid(source_anime_title, graph, node_id_mapping)
+
+    if source_anime_uid is None:
+        print(f"No se encontró el anime con el título '{source_anime_title}' en el grafo.")
+        return [], []
+
+    queue = deque([(source_anime_uid, 0)])
+    visited = set([source_anime_uid])
+    recommended_animes = []
+
+    while queue:
+        node, distance = queue.popleft()
+
+        if node not in node_id_mapping:
+            continue
+
+        successors = list(G_nx.successors(node_id_mapping[node]))
+        if not successors:
+            continue
+
+        for neighbor in successors:
+
+            if neighbor not in visited:
+                visited.add(neighbor)
+                queue.append((neighbor, distance + 1))
+
+                node_data = G_nx.nodes[neighbor]
+
+                if "tipo" in node_data:
+                    if node_data["tipo"] == "usuario":
+                        # Expandir a los animes favoritos de este usuario
+                        favorites_animes = list(G_nx.successors(neighbor))
+                        for anime_node in favorites_animes:
+                            if anime_node not in visited:
+                                visited.add(anime_node)
+                                queue.append((anime_node, distance + 1))
+                                recommended_animes.append((anime_node, distance + 1))
+
+                    elif node_data["tipo"] == "anime":
+                        recommended_animes.append((neighbor, distance + 1))
+                else:
+                    print(f"Atributo 'tipo' no encontrado para el nodo {neighbor}")
+    recommended_animes.sort(key=lambda x: x[1])
+    return recommended_animes
+~~~
+
+
 ## Conclusiones
 - En el presente trabajo abordamos la necesidad de personalización en las recomendaciones de anime, permitiendo a los usuarios explorar contenidos de acuerdo con sus gustos específicos.
 - Nuestra idea llamada OtaCopilot utiliza algoritmos avanzados como BFS y Kruskal para proporcionar recomendaciones precisas y personalizadas.
@@ -271,7 +350,11 @@ En resumen, la elección estratégica de estas tecnologías y algoritmos proporc
 - Link Organización GitHub: https://github.com/Algorithmic-Complexity-Group02
 - Link repositorio del informe: https://github.com/Algorithmic-Complexity-Group02/Report-Tp
 - Link del repositorio del dataset: https://github.com/Algorithmic-Complexity-Group02/dataset
-- Link del Project: https://github.com/orgs/Algorithmic-Complexity-Group02/projects/1/views/1
+- Link del Project: https://github.com/orgs/Algorithmic-Complexity-Group02/
+projects/1/views/1
+- Link del Back-end: https://github.com/Algorithmic-Complexity-Group02/OtaCopilot-API/tree/dev
+- Link del front-end: https://github.com/Algorithmic-Complexity-Group02/OtaCopilot-App2/tree/dev
+
 <div align=center>
     <img src="https://media.discordapp.net/attachments/1157361311060066345/1157705807098560562/image.png?ex=6519950d&is=6518438d&hm=f136d1592a6110a9f211d5497f4bf17ba1818831c4e7053c802458b69ceba1f1&=&width=1491&height=814" alt="Project Report"  width="80%"/>
 </div>
