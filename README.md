@@ -8,7 +8,7 @@
     <strong>Ingeniería de Software </strong><br>
     <strong>Complejidad Algorítmica</strong><br>
     <strong>Profesor: Luis Martin Canaval Sanchez</strong><br>
-    <br>INFORME DE TRABAJO FINAL - TP
+    <br>INFORME DE TRABAJO FINAL - HITO 2
 </p>
 
 <p align="center">
@@ -55,6 +55,11 @@
       - [Subgrafos](#subgrafos)
   - [Propuesta](#propuesta)
     - [Técnica y Metodología](#técnica-y-metodología)
+  - [Diseño de la Aplicación](#diseño-de-la-aplicación)
+    - [Diseño del Front](#diseño-del-front)
+    - [Diseño del Backend](#diseño-del-backend)
+    - [Algoritmo UDFS](#algoritmo-udfs)
+    - [Algoritmo BFS](#algoritmo-bfs)
   - [Conclusiones](#conclusiones)
   - [Bibliografía](#bibliografía)
   - [Anexos](#anexos)
@@ -219,11 +224,10 @@ Asimismo, podemos ver una representación a corta escala de la conexión entre l
 </div>
 <br>
 De igual forma, podemos ver otra representación a pequeña escala de 200 nodos en total
-
+</br>
 <div align=center>
     <img src="https://media.discordapp.net/attachments/1157361311060066345/1157719105269411851/d443498a-5a45-43cd-b421-7695ff05a4db.png?ex=6519a170&is=65184ff0&hm=81e06048ac63eedb7b83cd6a3afdeadc4ea55667df76bd705e7224926d4a7e76&=&width=1218&height=814" alt="Project Report"  width="70%"/>
 </div>
-<br><br>
 
 ## Propuesta
 
@@ -235,17 +239,143 @@ Para lograr este objetivo, proponemos utilizar una combinación de técnicas y a
 
 - **Algoritmo BFS:** Puede utilizarse para encontrar animes similares a los que un usuario ha marcado como favoritos. Al explorar el grafo de conexiones, puede identificar series que son populares entre usuarios con intereses similares. De igual forma, no solo puede buscar conexiones directas, sino que también puede explorar conexiones de segundo y tercer grado, lo que significa que puede recomendar series de animación que pueden no ser favoritos directos de un usuario, pero que están relacionados con los gustos de sus conexiones.
 
-- **Algoritmo de Kruskal:** Como mencionan Shahzad y Coenen (2020), este algoritmo puede ser utilizado para optimizar la agrupación de usuarios con intereses similares, ya que conectará a los usuarios que están más relacionados en función de sus gustos. Asimismo, indica que el enfoque basado en MST (Minimum Spanning Tree) produce recomendaciones comparables, pero con un menor costo de almacenamiento y, por lo tanto, menor costo en tiempo de ejecución. Asimismo, ambos autores sugiere que el uso de Kruskal para generar grupos de usuarios basados en MST resulta en una estrategia eficiente para optimizar recursos.
+- **Algoritmo UFDS:** En el algoritmo de recomendación de animes desarrollado, el uso de UFDS (Union Find Disjoint Set) desempeña un papel esencial. UFDS facilita la gestión eficiente de las relaciones entre animes mediante la estructura de Conjuntos Disjuntos. Cada anime es inicialmente un conjunto independiente, y cuando los usuarios establecen relaciones entre animes, la operación de unión fusiona los conjuntos correspondientes. Esto permite una identificación rápida de las conexiones entre animes mediante la operación de unión. La eficacia de UFDS radica en su capacidad para gestionar dinámicamente las relaciones establecidas entre los usuarios y sus animes favoritos.
 
-En este sentido, consideramos que tanto BFS como Kruskal son interesantes en este proyecto de recomendación de animes. BFS permite encontrar gustos similares basados en conexiones de usuarios, mientras que Kruskal mejora  la agrupación de usuarios con gustos afines, optimiza la eficiencia y precisión de las recomendaciones.
+Además de estos algoritmos, también proponemos el uso de las siguientes tecnologías para el desarrollo de la aplicación: 
+- **FastAPI para Eficiencia en el Backend:** La adopción de FastAPI en el backend garantiza una ejecución rápida y eficiente de las operaciones relacionadas con la búsqueda y recomendación de animes. La capacidad de generar automáticamente documentación a través de Swagger UI simplifica la comprensión y prueba de la API, facilitando el desarrollo y la colaboración.
+
+- **Angular para la Experiencia de Usuario:** Con su arquitectura basada en componentes, ofrece una interfaz de usuario dinámica y atractiva. La capacidad de Angular para gestionar la lógica de interfaz de usuario y presentar los resultados de las búsquedas y recomendaciones mejora significativamente la experiencia del usuario final.
+  
+
+
+## Diseño de la Aplicación 
+Nuestra app web cuenta con dos capas, estas son el "back-end" y en el "front-end", ambas trabajan en armonia para poder ejecutarse OtaCopilot, nuestro sitio web para buscar y recomendar gran variedad de Animes.
+### Diseño del Front
+La primera imagen cumple con la funcion de explicar sobre la app web, nos brinda una introducción a nuestra biblioteca virtual de Anime. Para la implementación de este apartado fue necesario el uso de Html, trabajado en el entorno de Angular.
+<div align=center>
+    <img src="https://media.discordapp.net/attachments/1171304594312265767/1172827989172563978/image.png?ex=6561bc2e&is=654f472e&hm=ee63cdb2af4148335667c40032d25d2208772fc11ad39c7dfa0cf459a6f918c3&=&width=1306&height=614" alt="Otacopilot web"  width="80%"/>
+</div>
 <br>
+La segunda imagen nos muestra una barra de busqueda en la cual el usuario puede escribir el nombre del Anime deseado y en base a esta información, el software nos brindara recomendaciones a parte del Anime solicitado. Para su implementación fue necesario el adaptamiento de nuestros algoritmos de busqueda, en caso se indroduzca el nombre de algun Anime, se llamaria a un 'endpoint' que vendria a ser el back-end y este ejecutaria el algoritmo, entonces siguiendo el proceso del algoritmo nos retornaria el Anime y sus respectivas recomendaciones.
+</br>
+</br>
+
+<div align=center>
+    <img src="https://media.discordapp.net/attachments/1157361311060066345/1172925177340907700/image.png?ex=656216b2&is=654fa1b2&hm=f05560c668ae0b5721e41afc9e1d442ca61b3897ee8d83a85ef2ca524fb768fb&=&width=1396&height=804" alt="Otacopilot web"  width="80%"/>
+</div>
+</br>
+La tercera imagen es un complemento del resto de la interfaz de usuario que nos da los Anime-Card iniciales y en consecuencia de buscar un anime, tambien se aprovechara este espacio en mostrarnos las recomendaciones. 
+</br>
+</br>
+
+<div align=center>
+    <img src="https://media.discordapp.net/attachments/1157361311060066345/1172926131427606579/image.png?ex=65621795&is=654fa295&hm=067b24996221beddd145f8af33c10b8b86be60398add51f66f131569aefa2083&=&width=1378&height=804" alt="Otacopilot web"  width="80%"/>
+</div>
+
+### Diseño del Backend
+
+Por último, presentamos el avance de nuestra API.
+<div align=center>
+    <img src="https://media.discordapp.net/attachments/1157361311060066345/1172925877156319243/image.png?ex=65621759&is=654fa259&hm=6c15c53a7ef0d236852d39ec600171dd6d814b1d568a26b44fc1d4d09668c590&=&width=1332&height=804" alt="Project Report"  width="80%"/>
+</div>
+
+### Algoritmo UDFS
+La aplicación del algoritmo UFDS para gestionar relaciones entre animes se revela como una estrategia eficaz. Este algoritmo facilita la identificación y conexión de animes relacionados, permitiendo una representación eficiente de las asociaciones dentro de la base de datos.
+
+~~~Python
+class DSU:
+    def __init__(self, nodes):
+        self.nodes = list(map(str, nodes))
+        self.parent_of = {node: node for node in self.nodes}
+        self.rank_of = {node: 1 for node in self.nodes}
+
+    def find(self, node):
+        if self.parent_of[node] != node:
+            self.parent_of[node] = self.find(self.parent_of[node])
+        return self.parent_of[node]
+
+    def union(self, node1, node2):
+        if node1 not in self.parent_of or node2 not in self.parent_of:
+            return False
+
+        root1 = self.find(node1)
+        root2 = self.find(node2)
+
+        if root1 == root2:
+            return False
+
+        if self.rank_of[root1] >= self.rank_of[root2]:
+            self.parent_of[root2] = root1
+            self.rank_of[root1] += self.rank_of[root2]
+        else:
+            self.parent_of[root1] = root2
+            self.rank_of[root2] += self.rank_of[root1]
+
+        return True
+~~~
+### Algoritmo BFS
+
+La implementación de BFS como parte del conjunto de técnicas de búsqueda y recomendación en la aplicación de búsqueda de animes contribuye significativamente a ofrecer recomendaciones personalizadas y relevantes para los usuarios, mejorando así la experiencia global del usuario.
+
+~~~Python
+def recommend_animes_bfs(graph, source_anime_title, node_id_mapping):
+    source_anime_uid = get_anime_uid(source_anime_title, graph, node_id_mapping)
+
+    if source_anime_uid is None:
+        print(f"No se encontró el anime con el título '{source_anime_title}' en el grafo.")
+        return [], []
+
+    queue = deque([(source_anime_uid, 0)])
+    visited = set([source_anime_uid])
+    recommended_animes = []
+
+    while queue:
+        node, distance = queue.popleft()
+
+        if node not in node_id_mapping:
+            continue
+
+        successors = list(G_nx.successors(node_id_mapping[node]))
+        if not successors:
+            continue
+
+        for neighbor in successors:
+
+            if neighbor not in visited:
+                visited.add(neighbor)
+                queue.append((neighbor, distance + 1))
+
+                node_data = G_nx.nodes[neighbor]
+
+                if "tipo" in node_data:
+                    if node_data["tipo"] == "usuario":
+                        # Expandir a los animes favoritos de este usuario
+                        favorites_animes = list(G_nx.successors(neighbor))
+                        for anime_node in favorites_animes:
+                            if anime_node not in visited:
+                                visited.add(anime_node)
+                                queue.append((anime_node, distance + 1))
+                                recommended_animes.append((anime_node, distance + 1))
+
+                    elif node_data["tipo"] == "anime":
+                        recommended_animes.append((neighbor, distance + 1))
+                else:
+                    print(f"Atributo 'tipo' no encontrado para el nodo {neighbor}")
+    recommended_animes.sort(key=lambda x: x[1])
+    return recommended_animes
+~~~
 
 ## Conclusiones
 - En el presente trabajo abordamos la necesidad de personalización en las recomendaciones de anime, permitiendo a los usuarios explorar contenidos de acuerdo con sus gustos específicos.
-- Nuestra idea llamada OtaCopilot utiliza algoritmos avanzados como BFS y Kruskal para proporcionar recomendaciones precisas y personalizadas.
+- Nuestra idea llamada OtaCopilot utiliza algoritmos avanzados como BFS y UFDS para proporcionar recomendaciones precisas y personalizadas.
 - Buscamos permitir a los usuarios explorar el vasto universo del anime, descubriendo nuevas obras que se ajusten a sus preferencias de manera más amplia y precisa.
 - Se busca proporcionar una interfaz amigable para el usuario, con una experiencia única para cada amante del anime.
-<br><br>
+
+- La implementación del algoritmo UFDS en el backend facilita la gestión de relaciones entre animes, generando recomendaciones más precisas. El UFDS comprende las complejas conexiones entre preferencias del usuario, ofreciendo sugerencias personalizadas.
+
+- La combinación de FastAPI en el backend y Angular en el frontend proporciona una gestión eficiente de datos y una interfaz de usuario dinámica. FastAPI agiliza el procesamiento de solicitudes, mejorando la velocidad, mientras que Angular ofrece una experiencia de usuario receptiva.
+
+<br>
 
 ## Bibliografía
 
@@ -265,6 +395,14 @@ En este sentido, consideramos que tanto BFS como Kruskal son interesantes en est
 - Link repositorio del informe: https://github.com/Algorithmic-Complexity-Group02/Report-Tp
 - Link del repositorio del dataset: https://github.com/Algorithmic-Complexity-Group02/dataset
 - Link del Project: https://github.com/orgs/Algorithmic-Complexity-Group02/projects/1/views/1
+- Link del Back-end: https://github.com/Algorithmic-Complexity-Group02/OtaCopilot-API/tree/dev
+- Link del front-end: https://github.com/Algorithmic-Complexity-Group02/OtaCopilot-App2/tree/dev
+
+</br>
+Evidencia de trabajo en equipo:
+</br>
+</br>
+- Projecto Trabajo Parcial:
 <div align=center>
     <img src="https://media.discordapp.net/attachments/1157361311060066345/1157705807098560562/image.png?ex=6519950d&is=6518438d&hm=f136d1592a6110a9f211d5497f4bf17ba1818831c4e7053c802458b69ceba1f1&=&width=1491&height=814" alt="Project Report"  width="80%"/>
 </div>
@@ -272,4 +410,11 @@ En este sentido, consideramos que tanto BFS como Kruskal son interesantes en est
   <div align=center>
     <img src="https://media.discordapp.net/attachments/1157361311060066345/1157709518042583090/image.png?ex=65199882&is=65184702&hm=0037065e9ad107c32161fbb13a89670d5a1fa2b7936d9ce004648062373dfe97&=&width=1620&height=304" alt="Project Report"  width="80%"/>
 </div>
-
+- Projecto HITO 2:
+<div align=center>
+    <img src="https://media.discordapp.net/attachments/1157361311060066345/1172915609550459050/image.png?ex=65620dc9&is=654f98c9&hm=6c2bd784824963e2d0b93a700168192269b168883ab8222af0af237ab6500a2b&=&width=1209&height=804" alt="Project Report"  width="80%"/>
+</div>
+  Evidencia Milestone Frontend:
+  <div align=center>
+    <img src="https://media.discordapp.net/attachments/1157361311060066345/1172916308589953074/image.png?ex=65620e6f&is=654f996f&hm=34ac4da54338a9a199c6d8e41bd114e1ac278c98e75a31679e6aaa16dac4ea9d&=&width=1620&height=349" alt="Project Report"  width="80%"/>
+</div>
