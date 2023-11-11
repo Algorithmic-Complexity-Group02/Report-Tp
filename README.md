@@ -235,9 +235,12 @@ Para lograr este objetivo, proponemos utilizar una combinación de técnicas y a
 
 - **Algoritmo BFS:** Puede utilizarse para encontrar animes similares a los que un usuario ha marcado como favoritos. Al explorar el grafo de conexiones, puede identificar series que son populares entre usuarios con intereses similares. De igual forma, no solo puede buscar conexiones directas, sino que también puede explorar conexiones de segundo y tercer grado, lo que significa que puede recomendar series de animación que pueden no ser favoritos directos de un usuario, pero que están relacionados con los gustos de sus conexiones.
 
-- **Algoritmo de Kruskal:** Como mencionan Shahzad y Coenen (2020), este algoritmo puede ser utilizado para optimizar la agrupación de usuarios con intereses similares, ya que conectará a los usuarios que están más relacionados en función de sus gustos. Asimismo, indica que el enfoque basado en MST (Minimum Spanning Tree) produce recomendaciones comparables, pero con un menor costo de almacenamiento y, por lo tanto, menor costo en tiempo de ejecución. Asimismo, ambos autores sugiere que el uso de Kruskal para generar grupos de usuarios basados en MST resulta en una estrategia eficiente para optimizar recursos.
+- **Algoritmo UFDS:** La aplicación del algoritmo UFDS para gestionar relaciones entre animes se revela como una estrategia eficaz. Este algoritmo facilita la identificación y conexión de animes relacionados, permitiendo una representación eficiente de las asociaciones dentro de la base de datos.
+  
+- **FastAPI para Eficiencia en el Backend:** La adopción de FastAPI en el backend garantiza una ejecución rápida y eficiente de las operaciones relacionadas con la búsqueda y recomendación de animes. La capacidad de generar automáticamente documentación a través de Swagger UI simplifica la comprensión y prueba de la API, facilitando el desarrollo y la colaboración.
 
-En este sentido, consideramos que tanto BFS como Kruskal son interesantes en este proyecto de recomendación de animes. BFS permite encontrar gustos similares basados en conexiones de usuarios, mientras que Kruskal mejora  la agrupación de usuarios con gustos afines, optimiza la eficiencia y precisión de las recomendaciones.
+- **Angular para la Experiencia de Usuario:** Con su arquitectura basada en componentes, ofrece una interfaz de usuario dinámica y atractiva. La capacidad de Angular para gestionar la lógica de interfaz de usuario y presentar los resultados de las búsquedas y recomendaciones mejora significativamente la experiencia del usuario final.
+  
 <br>
 
 ## Conclusiones
@@ -245,6 +248,10 @@ En este sentido, consideramos que tanto BFS como Kruskal son interesantes en est
 - Nuestra idea llamada OtaCopilot utiliza algoritmos avanzados como BFS y Kruskal para proporcionar recomendaciones precisas y personalizadas.
 - Buscamos permitir a los usuarios explorar el vasto universo del anime, descubriendo nuevas obras que se ajusten a sus preferencias de manera más amplia y precisa.
 - Se busca proporcionar una interfaz amigable para el usuario, con una experiencia única para cada amante del anime.
+  
+La conjunción de FastAPI, Angular y el algoritmo UFDS proporciona una base sólida para la implementación de un sistema de recomendación personalizada. La eficiencia en el backend, la experiencia de usuario enriquecida y la capacidad del algoritmo UFDS para gestionar relaciones entre animes se combinan para ofrecer recomendaciones precisas y pertinentes basadas en las preferencias del usuario.
+
+En resumen, la elección estratégica de estas tecnologías y algoritmos proporciona las herramientas necesarias para desarrollar una aplicación web de búsqueda de animes con capacidades avanzadas de recomendación. Esta combinación no solo optimiza la gestión de datos y la eficiencia del sistema, sino que también garantiza una experiencia de usuario envolvente y personalizada, satisfaciendo así las expectativas de los amantes del anime que buscan descubrir nuevas joyas dentro de este fascinante mundo.
 <br><br>
 
 ## Bibliografía
