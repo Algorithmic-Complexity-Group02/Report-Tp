@@ -324,7 +324,7 @@ def recommend_animes_bfs(graph, source_anime_title, node_id_mapping):
 
 ## Conclusiones
 - En el presente trabajo abordamos la necesidad de personalización en las recomendaciones de anime, permitiendo a los usuarios explorar contenidos de acuerdo con sus gustos específicos.
-- Nuestra idea llamada OtaCopilot utiliza algoritmos avanzados como BFS y Kruskal para proporcionar recomendaciones precisas y personalizadas.
+- Nuestra idea llamada OtaCopilot utiliza algoritmos avanzados como BFS y UFDS para proporcionar recomendaciones precisas y personalizadas.
 - Buscamos permitir a los usuarios explorar el vasto universo del anime, descubriendo nuevas obras que se ajusten a sus preferencias de manera más amplia y precisa.
 - Se busca proporcionar una interfaz amigable para el usuario, con una experiencia única para cada amante del anime.
   
