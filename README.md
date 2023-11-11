@@ -38,7 +38,7 @@
 </div>
 <br>
 
-<br><br>
+
 # Índice
 
 - [COURSE PROJECT](#course-project)
@@ -64,7 +64,6 @@
   - [Bibliografía](#bibliografía)
   - [Anexos](#anexos)
 
-<br><br>
 
 ## Introducción
 
@@ -223,11 +222,6 @@ Asimismo, podemos ver una representación a corta escala de la conexión entre l
     <img src="https://media.discordapp.net/attachments/1157361311060066345/1157705079252586496/image.png?ex=65199460&is=651842e0&hm=77d1382725487bc5de890f7321e0af26b6d66ace4ee264e84e80d6305493fb32&=&width=1377&height=814" alt="Project Report"  width="70%"/>
 </div>
 <br>
-De igual forma, podemos ver otra representación a pequeña escala de 200 nodos en total
-</br>
-<div align=center>
-    <img src="https://media.discordapp.net/attachments/1157361311060066345/1157719105269411851/d443498a-5a45-43cd-b421-7695ff05a4db.png?ex=6519a170&is=65184ff0&hm=81e06048ac63eedb7b83cd6a3afdeadc4ea55667df76bd705e7224926d4a7e76&=&width=1218&height=814" alt="Project Report"  width="70%"/>
-</div>
 
 ## Propuesta
 
@@ -246,8 +240,6 @@ Además de estos algoritmos, también proponemos el uso de las siguientes tecnol
 
 - **Angular para la Experiencia de Usuario:** Con su arquitectura basada en componentes, ofrece una interfaz de usuario dinámica y atractiva. La capacidad de Angular para gestionar la lógica de interfaz de usuario y presentar los resultados de las búsquedas y recomendaciones mejora significativamente la experiencia del usuario final.
   
-
-
 ## Diseño de la Aplicación 
 Nuestra app web cuenta con dos capas, estas son el "back-end" y en el "front-end", ambas trabajan en armonia para poder ejecutarse OtaCopilot, nuestro sitio web para buscar y recomendar gran variedad de Animes.
 ### Diseño del Front
@@ -364,7 +356,6 @@ def recommend_animes_bfs(graph, source_anime_title, node_id_mapping):
     recommended_animes.sort(key=lambda x: x[1])
     return recommended_animes
 ~~~
-
 ## Conclusiones
 - En el presente trabajo abordamos la necesidad de personalización en las recomendaciones de anime, permitiendo a los usuarios explorar contenidos de acuerdo con sus gustos específicos.
 - Nuestra idea llamada OtaCopilot utiliza algoritmos avanzados como BFS y UFDS para proporcionar recomendaciones precisas y personalizadas.
@@ -375,19 +366,14 @@ def recommend_animes_bfs(graph, source_anime_title, node_id_mapping):
 
 - La combinación de FastAPI en el backend y Angular en el frontend proporciona una gestión eficiente de datos y una interfaz de usuario dinámica. FastAPI agiliza el procesamiento de solicitudes, mejorando la velocidad, mientras que Angular ofrece una experiencia de usuario receptiva.
 
-<br>
 
 ## Bibliografía
-
-<br>
 
 - azathoth42. (2020, Octubre 31). MyAnimeList Dataset: Animes, Profiles, Reviews. Kaggle. https://www.kaggle.com/datasets/azathoth42/myanimelist 
 
 - Cervantes, H. (2019). La repercusión del anime en la sociedad: análisis sociológico. https://hdl.handle.net/11441/131682
 
 - Shahzad, A. y Coenen, F. (2020). Efficient Distributed MST Based Clustering for Recommender Systems. 2020 International Conference on Data Mining Workshops. ICDMW. https://ieeexplore.ieee.org/document/9346360/citations?tabFilter=papers#citations
-
-<br>
 
 ## Anexos
 
@@ -397,24 +383,4 @@ def recommend_animes_bfs(graph, source_anime_title, node_id_mapping):
 - Link del Project: https://github.com/orgs/Algorithmic-Complexity-Group02/projects/1/views/1
 - Link del Back-end: https://github.com/Algorithmic-Complexity-Group02/OtaCopilot-API/tree/dev
 - Link del front-end: https://github.com/Algorithmic-Complexity-Group02/OtaCopilot-App2/tree/dev
-
-</br>
-Evidencia de trabajo en equipo:
-</br>
-</br>
-- Projecto Trabajo Parcial:
-<div align=center>
-    <img src="https://media.discordapp.net/attachments/1157361311060066345/1157705807098560562/image.png?ex=6519950d&is=6518438d&hm=f136d1592a6110a9f211d5497f4bf17ba1818831c4e7053c802458b69ceba1f1&=&width=1491&height=814" alt="Project Report"  width="80%"/>
-</div>
-- Evidencia Milestone 1:
-  <div align=center>
-    <img src="https://media.discordapp.net/attachments/1157361311060066345/1157709518042583090/image.png?ex=65199882&is=65184702&hm=0037065e9ad107c32161fbb13a89670d5a1fa2b7936d9ce004648062373dfe97&=&width=1620&height=304" alt="Project Report"  width="80%"/>
-</div>
-- Projecto HITO 2:
-<div align=center>
-    <img src="https://media.discordapp.net/attachments/1157361311060066345/1172915609550459050/image.png?ex=65620dc9&is=654f98c9&hm=6c2bd784824963e2d0b93a700168192269b168883ab8222af0af237ab6500a2b&=&width=1209&height=804" alt="Project Report"  width="80%"/>
-</div>
-  Evidencia Milestone Frontend:
-  <div align=center>
-    <img src="https://media.discordapp.net/attachments/1157361311060066345/1172916308589953074/image.png?ex=65620e6f&is=654f996f&hm=34ac4da54338a9a199c6d8e41bd114e1ac278c98e75a31679e6aaa16dac4ea9d&=&width=1620&height=349" alt="Project Report"  width="80%"/>
-</div>
+- Link del project OtaCopilot Hito 2: https://github.com/orgs/Algorithmic-Complexity-Group02/projects/2 
