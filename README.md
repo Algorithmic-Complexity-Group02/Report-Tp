@@ -8,7 +8,7 @@
     <strong>Ingeniería de Software </strong><br>
     <strong>Complejidad Algorítmica</strong><br>
     <strong>Profesor: Luis Martin Canaval Sanchez</strong><br>
-    <br>INFORME DE TRABAJO FINAL - HITO 2
+    <br>INFORME DE TRABAJO FINAL - HITO 3
 </p>
 
 <p align="center">
@@ -264,12 +264,22 @@ La tercera imagen es un complemento del resto de la interfaz de usuario que nos 
     <img src="https://media.discordapp.net/attachments/1157361311060066345/1172926131427606579/image.png?ex=65621795&is=654fa295&hm=067b24996221beddd145f8af33c10b8b86be60398add51f66f131569aefa2083&=&width=1378&height=804" alt="Otacopilot web"  width="80%"/>
 </div>
 
+<div align=center>
+    <img src="https://media.discordapp.net/attachments/1171304594312265767/1176015900315500564/image.png?ex=656d5527&is=655ae027&hm=19a74eca031f21e9d3ec64277547de51a12c5eed3539dd99f09834ed266cc4e3&=&width=2582&height=1228" alt="Project Report"  width="80%"/>
+</div>
+
+<div align=center>
+    <img src="https://media.discordapp.net/attachments/1171304594312265767/1176015974214934538/image.png?ex=656d5539&is=655ae039&hm=255a447105258591ec9a6104279720b29e3828467c1f16e439e3609f13614dc4&=&width=2296&height=1228" alt="Project Report"  width="80%"/>
+</div>
+
 ### Diseño del Backend
 
 Por último, presentamos el avance de nuestra API.
 <div align=center>
     <img src="https://media.discordapp.net/attachments/1157361311060066345/1172925877156319243/image.png?ex=65621759&is=654fa259&hm=6c15c53a7ef0d236852d39ec600171dd6d814b1d568a26b44fc1d4d09668c590&=&width=1332&height=804" alt="Project Report"  width="80%"/>
 </div>
+
+
 
 ### Algoritmo UDFS
 La aplicación del algoritmo UFDS para gestionar relaciones entre animes se revela como una estrategia eficaz. Este algoritmo facilita la identificación y conexión de animes relacionados, permitiendo una representación eficiente de las asociaciones dentro de la base de datos.
