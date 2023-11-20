@@ -376,6 +376,8 @@ def recommend_animes_bfs(graph, source_anime_title, node_id_mapping):
 
 - La combinación de FastAPI en el backend y Angular en el frontend proporciona una gestión eficiente de datos y una interfaz de usuario dinámica. FastAPI agiliza el procesamiento de solicitudes, mejorando la velocidad, mientras que Angular ofrece una experiencia de usuario receptiva.
 
+- El algoritmo final nos permite ver nuestro anime elegido y sus respectivas recomendaciones, cumpliendo asi nuestro objetivo principal del proyecto.
+- La deridección y visualización de los animes en el front-end son amigables para el usuario interesado, de esta forma nos permite atraer atención de usuarios de todas las edades, por la simplicidad de la interfaz.
 
 ## Bibliografía
 
