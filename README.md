@@ -281,7 +281,7 @@ Por último, presentamos el avance de nuestra API.
 
 
 
-### Algoritmo UDFS
+### Algoritmo UFDS
 La aplicación del algoritmo UFDS para gestionar relaciones entre animes se revela como una estrategia eficaz. Este algoritmo facilita la identificación y conexión de animes relacionados, permitiendo una representación eficiente de las asociaciones dentro de la base de datos.
 
 ~~~Python
